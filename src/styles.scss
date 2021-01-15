@@ -1,0 +1,35 @@
+.App {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.party-button {
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  user-select: none;
+  transition: all ease .1s;
+
+  &:hover { background-color: rgba(0, 0, 0, 0.12); }
+  &:active {
+    transform: scale(0.95);
+    background-color: rgba(7, 7, 7, 0.15);
+  }
+}
+
+particle {
+  // Particles should be fixed so they can be placed at cursor coordinates.
+  position: fixed;
+  top: 0; left: 0;
+  opacity: 0; // Start hidden so you don't see elements as they are being added to DOM.
+  pointer-events: none;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  z-index: 0;
+}
